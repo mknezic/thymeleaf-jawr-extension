@@ -12,6 +12,13 @@ import org.thymeleaf.context.WebContext;
 import org.thymeleaf.processor.applicability.AttrApplicability;
 import org.thymeleaf.processor.applicability.TagNameApplicabilityFilter;
 
+/**
+ * 
+ * @author Miloš Milivojević
+ * 
+ *         Jawr attribute processor used for rendering the javascript bundle
+ *         imports; applied only to script attributes inside of script tags
+ */
 public class JawrScriptAttrProcessor extends AbstractJawrAttrProcessor {
 
 	public static final AttrApplicability SOURCE_TAG_SRC_ATTR_APPLICABILITY = new AttrApplicability("script", new TagNameApplicabilityFilter("script"));

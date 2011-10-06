@@ -1,7 +1,5 @@
 package com.google.code.thymeleaf.jawr;
 
-
-
 import java.io.IOException;
 import java.io.StringWriter;
 
@@ -23,6 +21,19 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+/**
+ * 
+ * @author Miloš Milivojević
+ * 
+ *         An abstract parent class that uses a Jawr renderer to get the
+ *         unescaped text that will be used to render a tag's content; because
+ *         this processor writes the renderer-provided text inside of it's
+ *         enclosing tag, the result will often be malformed HTML so it is
+ *         therefore suggested to use an instance of
+ *         {@link TagRemovingAttrProcessor} to wrap your attribute
+ *         processors
+ * 
+ */
 public abstract class AbstractJawrAttrProcessor extends AbstractUnescapedTextChildModifierAttrProcessor {
 
 	private static final int PRECEDENCE = 1000;
@@ -31,7 +42,7 @@ public abstract class AbstractJawrAttrProcessor extends AbstractUnescapedTextChi
 
 	@Override
 	public Integer getPrecedence() {
-		return Integer.valueOf(PRECEDENCE);
+		return PRECEDENCE;
 	}
 
 	protected ResourceBundlesHandler getResourceBundleHandlerFromContext(final WebContext p_pageContext, final String p_attributeName) {

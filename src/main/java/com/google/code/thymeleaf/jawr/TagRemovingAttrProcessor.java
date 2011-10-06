@@ -11,10 +11,19 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public class JawrTagRemovingAttrProcessor extends AbstractAttrProcessor {
+/**
+ * 
+ * @author Miloš Milivojević
+ * 
+ *         A wrapper class for Jawr processors that removes the attribute's
+ *         enclosing tag after using the provided Jawr processor to render the
+ *         tag's content
+ * 
+ */
+public class TagRemovingAttrProcessor extends AbstractAttrProcessor {
 	private final AbstractJawrAttrProcessor processor;
 
-	public JawrTagRemovingAttrProcessor(final AbstractJawrAttrProcessor p_processor) {
+	public TagRemovingAttrProcessor(final AbstractJawrAttrProcessor p_processor) {
 		processor = p_processor;
 	}
 
