@@ -8,6 +8,14 @@ import org.thymeleaf.doctype.translation.IDocTypeTranslation;
 import org.thymeleaf.processor.attr.IAttrProcessor;
 import org.thymeleaf.spring3.dialect.SpringStandardDialect;
 
+/**
+ * 
+ * @author Miloš Milivojević
+ * 
+ *         Jawr dialect class that defines it's prefix as {@code "jawr"} and
+ *         uses tag removing versions of attribute processors
+ * 
+ */
 public class JawrDialect extends AbstractXHTMLEnabledDialect {
 
 	public static final String PREFIX = "jawr";
@@ -32,8 +40,8 @@ public class JawrDialect extends AbstractXHTMLEnabledDialect {
 	@Override
 	public final Set<IAttrProcessor> getAttrProcessors() {
 		final Set<IAttrProcessor> processors = new HashSet<IAttrProcessor>();
-		processors.add(new JawrTagRemovingAttrProcessor(new JawrScriptAttrProcessor()));
-		processors.add(new JawrTagRemovingAttrProcessor(new JawrStyleAttrProcessor()));
+		processors.add(new TagRemovingAttrProcessor(new JawrScriptAttrProcessor()));
+		processors.add(new TagRemovingAttrProcessor(new JawrStyleAttrProcessor()));
 		return processors;
 	}
 

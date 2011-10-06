@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.google.code.thymeleaf-jawr-extension</groupId>
+	<groupId>com.googlecode.thymeleaf-jawr-extension</groupId>
 	<artifactId>thymeleaf-jawr-extension</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -29,6 +29,12 @@
 		<version.springframework>3.0.5.RELEASE</version.springframework>
 		<version.thymeleaf>1.1.1</version.thymeleaf>
 	</properties>
+
+	<scm>
+		<connection>https://thymeleaf-jawr-extension.googlecode.com/svn/trunk/</connection>
+		<developerConnection>https://thymeleaf-jawr-extension.googlecode.com/svn/trunk/</developerConnection>
+		<url>http://code.google.com/p/thymeleaf-jawr-extension/source/browse/</url>
+	</scm>
 
 	<build>
 		<finalName>thymeleaf-jawr-extension</finalName>

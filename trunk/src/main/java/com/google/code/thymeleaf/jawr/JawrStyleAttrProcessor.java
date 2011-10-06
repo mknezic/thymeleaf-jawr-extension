@@ -12,6 +12,13 @@ import org.thymeleaf.context.WebContext;
 import org.thymeleaf.processor.applicability.AttrApplicability;
 import org.thymeleaf.processor.applicability.TagNameApplicabilityFilter;
 
+/**
+ * 
+ * @author Miloš Milivojević
+ * 
+ *         Jawr attribute processor used for rendering the CSS bundle imports;
+ *         applied only to style attributes inside of link tags
+ */
 public class JawrStyleAttrProcessor extends AbstractJawrAttrProcessor {
 
 	private static final String MEDIA = "all";
