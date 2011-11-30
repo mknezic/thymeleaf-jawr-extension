@@ -36,7 +36,7 @@ import org.w3c.dom.Element;
  */
 public abstract class AbstractJawrAttrProcessor extends AbstractUnescapedTextChildModifierAttrProcessor {
 
-	private static final int PRECEDENCE = 1000;
+	private static final int PRECEDENCE = 900;
 
 	protected abstract BundleRenderer createRenderer(final WebContext p_pageContext);
 
