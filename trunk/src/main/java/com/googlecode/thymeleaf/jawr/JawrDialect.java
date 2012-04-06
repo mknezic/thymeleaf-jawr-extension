@@ -5,7 +5,7 @@ import java.util.Set;
 
 import org.thymeleaf.dialect.AbstractXHTMLEnabledDialect;
 import org.thymeleaf.doctype.translation.IDocTypeTranslation;
-import org.thymeleaf.processor.attr.IAttrProcessor;
+import org.thymeleaf.processor.IProcessor;
 import org.thymeleaf.spring3.dialect.SpringStandardDialect;
 
 /**
@@ -38,8 +38,8 @@ public class JawrDialect extends AbstractXHTMLEnabledDialect {
 	}
 
 	@Override
-	public final Set<IAttrProcessor> getAttrProcessors() {
-		final Set<IAttrProcessor> processors = new HashSet<IAttrProcessor>();
+	public final Set<IProcessor> getProcessors() {
+		final Set<IProcessor> processors = new HashSet<IProcessor>();
 		processors.add(new JawrTagRemovingAttrProcessor(new JawrScriptAttrProcessor()));
 		processors.add(new JawrTagRemovingAttrProcessor(new JawrStyleAttrProcessor()));
 		return processors;

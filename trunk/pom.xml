@@ -48,7 +48,7 @@
 		<version.jawr>3.3.3</version.jawr>
 		<version.servlet>3.0.1</version.servlet>
 		<version.springframework>3.0.5.RELEASE</version.springframework>
-		<version.thymeleaf>1.1.2</version.thymeleaf>
+		<version.thymeleaf>2.0.5</version.thymeleaf>
 	</properties>
 
 	<build>
