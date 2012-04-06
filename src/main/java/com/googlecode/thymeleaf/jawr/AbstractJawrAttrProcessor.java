@@ -14,12 +14,12 @@ import org.springframework.web.servlet.support.RequestContext;
 import org.springframework.web.servlet.support.RequestUtil;
 import org.thymeleaf.Arguments;
 import org.thymeleaf.context.WebContext;
+import org.thymeleaf.dom.Element;
+import org.thymeleaf.dom.Node;
+import org.thymeleaf.processor.IAttributeNameProcessorMatcher;
+import org.thymeleaf.processor.IProcessorMatcher;
 import org.thymeleaf.processor.attr.AbstractUnescapedTextChildModifierAttrProcessor;
 import org.thymeleaf.spring3.naming.SpringContextVariableNames;
-import org.thymeleaf.templateresolver.TemplateResolution;
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 
 /**
  * 
@@ -36,12 +36,20 @@ import org.w3c.dom.Element;
  */
 public abstract class AbstractJawrAttrProcessor extends AbstractUnescapedTextChildModifierAttrProcessor {
 
+	public AbstractJawrAttrProcessor(String attributeName) {
+		super(attributeName);
+	}
+	
+	public AbstractJawrAttrProcessor(IAttributeNameProcessorMatcher matcher) {
+		super(matcher);
+	}
+
 	private static final int PRECEDENCE = 900;
 
 	protected abstract BundleRenderer createRenderer(final WebContext p_pageContext);
 
 	@Override
-	public Integer getPrecedence() {
+	public int getPrecedence() {
 		return PRECEDENCE;
 	}
 
@@ -63,15 +71,17 @@ public abstract class AbstractJawrAttrProcessor extends AbstractUnescapedTextChi
 		return out.toString();
 	}
 
+	
+	
 	@Override
-	protected final String getText(final Arguments p_arguments, final TemplateResolution p_templateResolution, final Document p_document, final Element p_element,
-			final Attr p_attribute, final String p_attributeName, final String p_attributeValue) {
+	protected final String getText(final Arguments p_arguments, final Element p_element, final String p_attributeName) {
 
 		String result = "";
 
 		try {
 			final WebContext context = (WebContext) p_arguments.getContext();
-			result = getRenderedString(p_attributeValue, context);
+			final String attributeValue = p_element.getAttributeValue(p_attributeName);
+			result = getRenderedString(attributeValue, context);
 		} catch (final IOException e) {
 		}
 
