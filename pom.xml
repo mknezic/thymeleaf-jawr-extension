@@ -3,7 +3,7 @@
 
 	<groupId>com.googlecode.thymeleaf-jawr-extension</groupId>
 	<artifactId>thymeleaf-jawr-extension</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>thymeleaf-jawr-extension</name>
@@ -34,9 +34,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:svn:https://thymeleaf-jawr-extension.googlecode.com/svn/tags/thymeleaf-jawr-extension-0.0.1</connection>
-		<developerConnection>scm:svn:https://thymeleaf-jawr-extension.googlecode.com/svn/tags/thymeleaf-jawr-extension-0.0.1</developerConnection>
-		<url>http://code.google.com/p/thymeleaf-jawr-extension/source/browse/tags/thymeleaf-jawr-extension-0.0.1</url>
+		<connection>scm:svn:https://thymeleaf-jawr-extension.googlecode.com/svn/</connection>
+		<developerConnection>scm:svn:https://thymeleaf-jawr-extension.googlecode.com/svn/</developerConnection>
+		<url>http://code.google.com/p/thymeleaf-jawr-extension/source/browse/</url>
 	</scm>
 
 	<properties>
