@@ -34,8 +34,8 @@
 	</developers>
 
 	<scm>
-		<connection>scm:svn:https://thymeleaf-jawr-extension.googlecode.com/svn/</connection>
-		<developerConnection>scm:svn:https://thymeleaf-jawr-extension.googlecode.com/svn/</developerConnection>
+		<connection>scm:svn:https://thymeleaf-jawr-extension.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://thymeleaf-jawr-extension.googlecode.com/svn/trunk</developerConnection>
 		<url>http://code.google.com/p/thymeleaf-jawr-extension/source/browse/</url>
 	</scm>
 
