@@ -36,7 +36,8 @@ public class JawrTagRemovingAttrProcessor extends AbstractAttrProcessor {
 		final NestableNode parent = p_element.getParent();
 		
 		for(final Node child : p_element.getChildren()) {
-			parent.addChild(child);
+			p_element.removeChild(child);
+			parent.insertAfter(p_element, child);
 		}
 		
 		parent.removeChild(p_element);
