@@ -37,7 +37,7 @@ public class JawrTagRemovingAttrProcessor extends AbstractAttrProcessor {
 		
 		for(final Node child : p_element.getChildren()) {
 			p_element.removeChild(child);
-			parent.insertAfter(p_element, child);
+			parent.insertBefore(p_element, child);
 		}
 		
 		parent.removeChild(p_element);
