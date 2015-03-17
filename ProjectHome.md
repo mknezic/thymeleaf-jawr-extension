@@ -1,0 +1,1 @@
+A dialect for Thymeleaf template engine enabling the use of Jawr
